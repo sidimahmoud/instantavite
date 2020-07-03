@@ -1,5 +1,5 @@
 <template>
-<div class="container" :class="{loadingItem: isProductLoading}">
+<div class="" :class="{loadingItem: isProductLoading}">
   <div class="row text-center" v-if="isProductLoading">
     <grid-loader :loading="isProductLoading" :color="loaderColor" :size="loaderSize"></grid-loader>
   </div>

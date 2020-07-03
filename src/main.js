@@ -5,10 +5,20 @@ import { routes } from './routes';
 import store from './stores/store';
 import { firebaseListener } from './config/firebaseConfig';
 import './assets/styles/app.scss'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+ 
+library.add(faUserSecret)
+ 
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 import App from './App.vue';
 
 Vue.use(VueRouter);
+Vue.use(ElementUI);
 
 
 firebaseListener(authStatusChange);

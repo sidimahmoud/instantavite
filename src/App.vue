@@ -3,27 +3,20 @@
     <main class="flex-fill">
       <app-header></app-header>
       <message-component></message-component>
-      <div class="container mt-3">
+      <div class="container-fluid mt-3">
           <div class="row">
             <div class="col-md-12">
               <router-view></router-view>
               <div class="card panel-warning d-none d-sm-flex" id="reset-store-panel">
-                <div class="card-header">Admin Panel (Testing purpose)</div>
-                  <div class="card-body text-center">
-                    <button class="btn btn-warning">Reset Store</button>
-                  </div>
+                <!--chat goes here-->
               </div>
             </div>
           </div>
       </div>
     </main>
 
-    <footer class="navbar-default navbar-bottom navbar-dark bg-dark">
-      <div class="container-fluid">
-            <p class="text-center nav-bar mb-0">Checkout repository at <a href="https://github.com/ittus/vuejs-firebase-shopping-cart" target="_blank">
-              https://github.com/ittus/vuejs-firebase-shopping-cart
-            </a></p>
-      </div>
+    <footer class="navbar-default navbar-bottom navbar-dark bg-dark text-white" style="height:60px">
+      <app-footer></app-footer>
     </footer>
 </div>
 
@@ -32,19 +25,21 @@
 <script>
   import { mapActions } from 'vuex';
   import Header from './components/Header.vue';
+  import Footer from './components/Footer.vue';
   import MessageComponent from './components/common/MessageComponent.vue';
   export default {
     components: {
       appHeader: Header,
-      MessageComponent
+      MessageComponent,
+      appFooter: Footer
     },
     methods: {
       ...mapActions(['getShoppingCart', 'listenToProductList'])
     },
     created() {
-      let uid = this.$store.getters.currentUser.uid;
-      this.listenToProductList();
-      this.getShoppingCart({uid, currentCart: this.$store.getters.cartItemList});
+      //let uid = this.$store.getters.currentUser.uid;
+      //this.listenToProductList();
+      //this.getShoppingCart({uid, currentCart: this.$store.getters.cartItemList});
     }
   }
 </script>
