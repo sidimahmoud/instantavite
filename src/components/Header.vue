@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-light text-dark" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <router-link to="/" class="navbar-brand mr-auto"><img src="@/assets/img/app-logo.png" alt="app-logo" width="100" height="50"></router-link>
+    <router-link to="/" class="navbar-brand mr-auto"><img src="@/assets/img/app-logo.png" alt="app-logo" width="150" height="70"></router-link>
     <button
         class="navbar-toggler"
         type="button"
@@ -29,6 +29,11 @@
         <li>
           <router-link to="/" class="nav-item">
             Produits
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/" class="nav-item">
+            Vous ne trouvez pas ce que vous chercher?
           </router-link>
         </li>
         <li>

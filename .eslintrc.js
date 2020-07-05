@@ -16,9 +16,6 @@ module.exports = {
     parser: "babel-eslint",
     sourceType: 'module',
     allowImportExportEverywhere: true
-  },
-  performance: {
-    hints: process.env.NODE_ENV === 'production' ? "warning" : false
-  },
-       
+  }
+    
 };
