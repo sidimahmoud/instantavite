@@ -16,8 +16,8 @@
     </button>
 
     <div class="search-item">
-      <el-input size="mini" placeholder="Chercher un produit par nom">
-        <span class="el-icon-search el-input__icon app-cursor-pointer" slot="suffix"></span>
+      <el-input size="mini" placeholder="Chercher un produit par nom" v-model="product">
+        <span class="el-icon-search el-input__icon app-cursor-pointer" slot="suffix" ></span>
       </el-input>
     </div>  
 
@@ -27,13 +27,20 @@
       </ul>
       <ul class="nav navbar-nav">
         <li>
-          <router-link to="/cart" class="nav-item">
-            Catégorie des produits
+          <router-link to="/" class="nav-item">
+            Produits
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/" class="nav-item">
+            A propos
           </router-link>
         </li>
         <li>
           <router-link to="/login" class="nav-item">
-            <div><i class="fas fa-user"></i>
+            <div style="line-height: 100%;">  
+              <span ><i class="fas fa-user"></i></span><br>
+              <span>Compte</span>
             </div>
           </router-link>
         </li>
@@ -60,7 +67,8 @@ import {
 export default {
   data() {
     return {
-      isNavOpen: false
+      isNavOpen: false,
+      product:''
     }
   },
   computed: {

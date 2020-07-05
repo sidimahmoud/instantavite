@@ -43,6 +43,11 @@
             </div>
           </div>
         </div>
+        <div>
+          <el-divider>OU</el-divider>
+          <button class="button-fcb"> Login with Facebook</button><br>
+          <button class="button-google"> Login with Google</button>
+        </div>  
       </form>
     </div>
   </div>
@@ -87,3 +92,27 @@ export default {
   }
 }
 </script>
+<style>
+.button-fcb{
+  color:white;
+  width: 100%;
+  min-width: 250px;
+  background-color: blue;
+  height: 2.5rem;
+  border-radius: 1rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+.button-google{
+  color:red;
+  width: 100%;
+  min-width: 250px;
+  background-color: white;
+  height: 2.5rem;
+  border-radius: 1rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+</style>

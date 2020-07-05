@@ -10,15 +10,18 @@ import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import VueSidebarMenu from 'vue-sidebar-menu';
+import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
  
-library.add(faUserSecret)
+library.add(faUserSecret);
  
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 import App from './App.vue';
 
 Vue.use(VueRouter);
 Vue.use(ElementUI);
+Vue.use(VueSidebarMenu);
 
 
 firebaseListener(authStatusChange);
