@@ -16,7 +16,7 @@
     </button>
 
     <div class="search-item">
-      <el-input size="mini" placeholder="Chercher un produit par nom" v-model="product">
+      <el-input placeholder="Chercher un produit par nom" v-model="product">
         <span class="el-icon-search el-input__icon app-cursor-pointer" slot="suffix" ></span>
       </el-input>
     </div>  
@@ -27,32 +27,54 @@
       </ul>
       <ul class="nav navbar-nav">
         <li>
-          <router-link to="/" class="nav-item">
-            Produits
+          <router-link to="/apropos" class="nav-item">
+            <el-button size="meduim">A propos</el-button>
           </router-link>
         </li>
         <li>
           <router-link to="/" class="nav-item">
-            Vous ne trouvez pas ce que vous chercher?
+            
+            <el-dropdown :hide-on-click="false">
+              <span class="el-dropdown-link">
+                <el-button size="meduim">Autres Produits<i class="el-icon-arrow-down el-icon--right"></i></el-button>
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item>Article de dépaneur</el-dropdown-item>
+                <el-dropdown-item>Article de moins de 5$</el-dropdown-item>
+                <el-dropdown-item>Sport</el-dropdown-item>
+                <el-dropdown-item>Electroniques</el-dropdown-item>
+                <el-dropdown-item divided>Quincaillerie</el-dropdown-item>
+                <el-dropdown-item divided>Mode</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
           </router-link>
         </li>
         <li>
-          <router-link to="/" class="nav-item">
-            A propos
+          <router-link to="/other-products" class="nav-item">
+            <el-button size="meduim">Vous ne trouvez pas ce que vous chercher?</el-button>
           </router-link>
         </li>
         <li>
           <router-link to="/login" class="nav-item">
-            <div style="line-height: 100%;">  
-              <span ><i class="fas fa-user"></i></span><br>
-              <span>Compte</span>
+            <div>  
+              <el-button>
+                <span ><i class="fas fa-user"></i></span><br>
+              </el-button>
             </div>
           </router-link>
         </li>
         <li>
           <router-link to="/cart" class="nav-item">
-            <i class="fas fa-shopping-cart"></i><el-badge :value="numItems"></el-badge><span class="badge badge-light">$ {{ cartValue }}</span>
+            <el-button size="small">
+              <i class="fas fa-shopping-cart"></i><el-badge :value="numItems"></el-badge><span class="badge badge-light">$ {{ cartValue }}</span>
+            </el-button>
           </router-link>
+        </li>
+        <li>
+          <el-select v-model="language" style="width: 70px">
+            <el-option label="FR" value="fr" />
+            <el-option label="EN" value="en" />
+          </el-select>
         </li>
         
         <li v-if="isLoggedIn" class="li-pointer nav-item">
@@ -73,7 +95,8 @@ export default {
   data() {
     return {
       isNavOpen: false,
-      product:''
+      product:'',
+      language: 'fr'
     }
   },
   computed: {
@@ -111,6 +134,6 @@ export default {
   cursor: pointer;
 }
 li{
-  margin-left: 10px;
+  margin-left: 5px;
 }
 </style>

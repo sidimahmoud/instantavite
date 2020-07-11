@@ -2,6 +2,7 @@
 <div class="d-flex flex-column sticky-footer-wrapper">
     <main class="flex-fill">
       <app-header></app-header>
+      <sub-header></sub-header>
       <message-component></message-component>
       <div class="container-fluid mt-3">
           <div class="row">
@@ -9,6 +10,7 @@
               <router-view></router-view>
               <div class="card panel-warning d-none d-sm-flex" id="reset-store-panel">
                 <!--chat goes here-->
+                
               </div>
             </div>
           </div>
@@ -27,11 +29,14 @@
   import Header from './components/Header.vue';
   import Footer from './components/Footer.vue';
   import MessageComponent from './components/common/MessageComponent.vue';
+  import SubHeader from './components/common/SubHeader.vue';
+
   export default {
     components: {
       appHeader: Header,
       MessageComponent,
-      appFooter: Footer
+      appFooter: Footer,
+      SubHeader
     },
     methods: {
       ...mapActions(['getShoppingCart', 'listenToProductList'])
