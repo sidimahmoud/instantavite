@@ -71,7 +71,7 @@
           </router-link>
         </li>
         <li>
-          <el-select v-model="language" style="width: 70px">
+          <el-select v-model="language" style="width: 62px">
             <el-option label="FR" value="fr" />
             <el-option label="EN" value="en" />
           </el-select>
