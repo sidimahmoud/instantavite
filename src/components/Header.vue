@@ -36,7 +36,7 @@
             
             <el-dropdown :hide-on-click="false">
               <span class="el-dropdown-link">
-                <el-button size="meduim">Autres Produits<i class="el-icon-arrow-down el-icon--right"></i></el-button>
+                <el-button size="small">Autres Produits<i class="el-icon-arrow-down el-icon--right"></i></el-button>
               </span>
               <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item>Article de dépaneur</el-dropdown-item>
