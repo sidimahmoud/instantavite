@@ -3,6 +3,7 @@
     <main class="flex-fill">
       <app-header></app-header>
       <sub-header></sub-header>
+      <search-bar></search-bar>
       <message-component></message-component>
       <div class="container-fluid mt-3">
           <div class="row">
@@ -30,13 +31,15 @@
   import Footer from './components/Footer.vue';
   import MessageComponent from './components/common/MessageComponent.vue';
   import SubHeader from './components/common/SubHeader.vue';
-
+  import SearchBar from './components/common/SearchBar.vue';
+  
   export default {
     components: {
       appHeader: Header,
       MessageComponent,
       appFooter: Footer,
-      SubHeader
+      SubHeader,
+      SearchBar
     },
     methods: {
       ...mapActions(['getShoppingCart', 'listenToProductList'])

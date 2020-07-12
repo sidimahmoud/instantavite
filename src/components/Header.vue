@@ -1,8 +1,8 @@
 <template>
-<nav class="navbar navbar-expand-sm navbar-dark bg-light text-dark" role="navigation">
+<nav class="navbar navbar-expand-sm navbar-dark bg-light text-dark fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <router-link to="/" class="navbar-brand mr-auto"><img src="@/assets/img/app-logo.png" alt="app-logo" width="150" height="70"></router-link>
+    <router-link to="/" class="navbar-brand mr-auto"><img src="@/assets/img/logo.png" alt="app logo" width="110" height="30"></router-link>
     <button
         class="navbar-toggler"
         type="button"
@@ -13,9 +13,7 @@
         aria-label="Toggle navigation"
         @click="toggleNavbar">
       <span class="navbar-toggler-icon"></span>
-    </button>
-
-     
+    </button>  
 
     <div class="collapse navbar-collapse" id="navbarTop" :class="{show: isNavOpen}">
       <ul class="navbar-nav mr-auto">
@@ -35,7 +33,7 @@
                 <el-button size="small">Autres Produits<i class="el-icon-arrow-down el-icon--right"></i></el-button>
               </span>
               <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item>Article de dépaneur</el-dropdown-item>
+                <el-dropdown-item>Article de dépanneur</el-dropdown-item>
                 <el-dropdown-item>Article de moins de 5$</el-dropdown-item>
                 <el-dropdown-item>Sport</el-dropdown-item>
                 <el-dropdown-item>Electroniques</el-dropdown-item>

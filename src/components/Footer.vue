@@ -16,7 +16,7 @@
     <div class="col" >
         <div class="footer-right">
           <a href="" class="footer-links">FAQ</a>
-          <a href="" class="footer-links">Nous joinder</a>
+          <a href="" class="footer-links">Nous joindre</a>
           <a href="" class="footer-links">Termes et conditions</a>
         </div>
     </div>
