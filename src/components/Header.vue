@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-light text-dark fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <router-link to="/" class="navbar-brand mr-auto"><img src="@/assets/img/logo.png" alt="app logo" width="110" height="30"></router-link>
+    <router-link to="/apropos" class="navbar-brand mr-auto"><img src="@/assets/img/logo.png" alt="app logo" width="110" height="30"></router-link>
     <button
         class="navbar-toggler"
         type="button"
